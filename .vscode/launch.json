@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "src/index.js",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "runtimeArgs": ["-r", "sucrase/register"],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/src/index.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "vscode-jest-tests",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "args": ["--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+    }
+  ]
+}
